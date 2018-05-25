@@ -1,0 +1,2 @@
+0 2 * * * root find /srv/elastic/logs -name "*log*" -type f -mtime +10 -exec rm {} \;
+0 2 1 * * root [[ -e /srv/elastic/logs/curator.log ]] && { > /srv/elastic/logs/curator.log; }

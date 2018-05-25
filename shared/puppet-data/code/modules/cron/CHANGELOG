@@ -1,0 +1,28 @@
+v0.2.1: 2016-04-30
+Changes:
+  * Fix service support on Archlinux
+v0.2.0: 2016-04-28
+Changes:
+  * Add support for Ubuntu, Gentoo, Archlinux, RedHat 5
+  * Allows specifying desired version of cron package
+  * Allow command to be unset when $ensure = absent
+  * Puppet v4 Compatibility (file modes are now strings)
+  * Adds service management
+
+v0.1.0: 2013-08-27
+Changes:
+  * Add support for the "ensure" parameter
+
+v0.0.3: 2013-07-04
+Changes:
+  * Make job files owned by root
+  * Fix warnings for Puppet 3.2.2
+
+v0.0.2: 2013-05-11
+Changes:
+  * Make mode of job file configurable
+
+v0.0.1: 2013-03-02
+Changes:
+  * Initial PuppetForge release
+

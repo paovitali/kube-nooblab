@@ -1,0 +1,40 @@
+# USERS:
+users:
+  'root':
+    name: 'root'
+    password: '$1$4YbghbDv$8L.vG87tHZIUAqPGSwWKX.'
+
+# SSH KEYS
+ssh_dirs:
+   'root.authorized_sshdir':
+      path: '/root/.ssh/'
+      ensure: 'directory'
+      owner: 'root'
+      group: 'root'
+      mode:  '700'
+      require: 'User[root]'
+ssh_file_authorized_keys:
+   'root.authorized_keys':
+      ensure: 'present'
+      path: '/root/.ssh/authorized_keys'
+      source: 'puppet:///modules/base/ssh-keys/root.authorized_keys'
+      owner: 'root'
+      group: 'root'
+      mode: '640'
+      require: 'User[root]'
+
+# SSH SERVER OPTIONS
+ssh::sshd_client_alive_interval: '60'
+ssh::sshd_client_alive_count_max: '3'
+ssh::sshd_config_tcp_keepalive: 'no'
+ssh::sshd_config_use_dns: 'no'
+
+# SELINUX
+selinux::mode: 'disabled'
+
+# CLASSES
+classes:
+  - base::users
+  - base::motd     
+  - base::getrole
+  - selinux
