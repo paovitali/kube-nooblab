@@ -28,11 +28,16 @@ sudo systemctl disable firewalld
 
 # Setup puppet agent
 sudo yum -y install puppet-agent
+
 sudo cat <<EOT >> /etc/puppetlabs/puppet/puppet.conf
 [main]
 server = foreman.lab
 environment = production
 runinterval = 15m
 EOT
-sudo /opt/puppetlabs/bin/puppet agent -t
+
+sudo /opt/puppetlabs/bin/puppet agent -tvd
+sudo /opt/puppetlabs/bin/puppet agent -tvd
+sudo /opt/puppetlabs/bin/puppet agent -tvd
+
 sudo systemctl enable puppet
