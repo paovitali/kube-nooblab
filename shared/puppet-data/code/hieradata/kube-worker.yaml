@@ -4,8 +4,8 @@ etc_hosts:
    line: '192.168.56.30 kubernetes etcd-kube-master'
 
 
-kubernetes::controller: true
-kubernetes::bootstrap_controller: true
+kubernetes::worker: true
+kubernetes::node_label: "%{::fqdn}"
 kubernetes::kubernetes_version: 1.9.7
 kubernetes::kubernetes_package_version: '1.9.7-0'
 kubernetes::container_runtime: docker
