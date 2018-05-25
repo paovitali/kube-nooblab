@@ -79,8 +79,8 @@ class kubernetes::service (
     exec {'Checking for the Kubernetes cluster to be ready':
       path        => ['/usr/bin', '/bin'],
       command     => 'kubectl get nodes | grep -w NotReady',
-      tries       => 50,
-      try_sleep   => 10,
+      tries       => 10,
+      try_sleep   => 5,
       logoutput   => true,
       unless      => 'kubectl get nodes',
       environment => [ 'HOME=/root', 'KUBECONFIG=/root/admin.conf'],
