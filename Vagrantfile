@@ -71,8 +71,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # Post Install Scripts
       config.vm.provision :shell, :path => node_values[':bootstrap']
 
-      # Vagrant Reload
-      config.vm.provision :reload
+      # Vagrant Reloads
+      (1..2).each do |i| 
+        config.vm.provision :reload
+      end
 
     end
   end
