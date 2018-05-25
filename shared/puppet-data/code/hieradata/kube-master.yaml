@@ -6,6 +6,7 @@ etc_hosts:
 
 kubernetes::controller: true
 kubernetes::bootstrap_controller: true
+kubernetes::node_label: "%{::fqdn}"
 kubernetes::kubernetes_version: 1.9.7
 kubernetes::kubernetes_package_version: '1.9.7-0'
 kubernetes::container_runtime: docker
