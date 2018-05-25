@@ -11,7 +11,7 @@
     "foreman.lab": {
       ":ip": "192.168.56.10",
       "ports": [],
-      ":memory": 1024,
+      ":memory": 2048,
       ":cpus": 2,
       ":box": "CentosBox/Centos7-v7.3-Minimal",
       ":shared_dir_host": "shared/puppet-data/code",
