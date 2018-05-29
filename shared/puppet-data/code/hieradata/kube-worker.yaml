@@ -18,7 +18,7 @@ kubernetes::bootstrap_controller_ip: 192.168.56.30
 kubernetes::etcd_initial_cluster: etcd-kube-master=http://192.168.56.30:2380
 kubernetes::etcd_ip: 192.168.56.30
 kubernetes::kube_api_advertise_address: 192.168.56.30
-kubernetes::install_dashboard: true
+kubernetes::install_dashboard: false
 kubernetes::kube_api_service_ip: 10.96.0.1
 kubernetes::kube_dns_ip: 10.96.0.10
 
