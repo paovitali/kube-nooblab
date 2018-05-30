@@ -29,6 +29,14 @@
       ":box": "centos/7",
       ":bootstrap": "bootstrap-centos-base.sh"
     },
+    "kubernetes.lab": {
+      ":ip": "192.168.56.31",
+      "ports": [],
+      ":memory": 1536,
+      ":cpus": 2,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-centos-base.sh"
+    },
     "kube-worker.lab": {
       ":ip": "192.168.56.40",
       "ports": [],
