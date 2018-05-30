@@ -5,6 +5,7 @@ env=common
 if [[ `hostname -s` == *foreman* ]]		; then echo puppetmaster	; exit 0 ;fi
 if [[ `hostname -s` == *dns* ]]			; then echo dns			; exit 0 ;fi
 if [[ `hostname -s` == *kube-master* ]]	; then echo kube-master		; exit 0 ;fi
+if [[ `hostname -s` == *kubernetes* ]]	; then echo kube-master		; exit 0 ;fi
 if [[ `hostname -s` == *kube-worker* ]]	; then echo kube-worker		; exit 0 ;fi
 #if [[ `hostname -s` == *kubewrk* ]]   ; then echo kube-worker   ; exit 0 ; fi
 
