@@ -3,8 +3,8 @@
 # Run on VM to bootstrap the Foreman server
 
 # Update system first (disabled until centos 7.5 comes to life as a vagrant basebox)
-#sudo yum update -y
-#sudo yum check-update
+sudo yum update -y
+sudo yum check-update
 
 # Disable selinux everywhere
 sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
