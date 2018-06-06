@@ -13,7 +13,7 @@
       "ports": [],
       ":memory": 2048,
       ":cpus": 2,
-      ":box": "CentosBox/Centos7-v7.3-Minimal",
+      ":box": "centos/7",
       ":shared_dir_host": "shared/puppet-data/code",
       ":shared_dir_guest": "/etc/puppetlabs/code",
       ":shared_dir_type": "virtualbox",
