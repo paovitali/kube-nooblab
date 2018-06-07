@@ -2,7 +2,7 @@
 
 # Run on VM to bootstrap the Foreman server
 
-# Update system first (disabled until centos 7.5 comes to life as a vagrant basebox)
+# Update system first
 sudo yum update -y
 sudo yum check-update
 
@@ -15,7 +15,7 @@ sudo yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 sudo yum -y install curl git rsync net-tools vim mc htop docker
 
 # Install puppet
-sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm &&
+sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 
 # Install Foreman
 sudo yum -y install https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm && \
@@ -39,6 +39,14 @@ sudo systemctl disable firewalld
 sudo systemctl enable docker
 sudo systemctl start docker
 
-# Refresh httpd
+# Refresh services
 sudo systemctl restart httpd
 sleep 10
+sudo systemctl restart puppet
+sleep 10
+sudo systemctl restart foreman
+sleep 10
+puppet agent -tvd
+
+# Exiting
+exit 0
