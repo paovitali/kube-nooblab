@@ -18,8 +18,8 @@ sudo yum -y install curl git rsync net-tools vim mc htop docker
 sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 
 # Install Foreman
-sudo yum -y install https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm && \
-sudo yum -y install foreman-installer && \
+sudo yum -y install https://yum.theforeman.org/releases/latest/el7/x86_64/foreman-release.rpm 
+sudo yum -y install foreman-installer
 sudo foreman-installer
 
 # Foreman Fix yaml configuration
