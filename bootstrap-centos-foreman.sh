@@ -46,7 +46,7 @@ sudo systemctl restart puppet
 sleep 10
 sudo systemctl restart foreman
 sleep 10
-puppet agent -tvd
+for i in {1..3}; do /opt/puppetlabs/bin/puppet agent -tvd; done
 
 # Exiting
 exit 0
