@@ -37,9 +37,9 @@ services:
 
 # KUBERNETES - CONFIGURE
 custom_file:
-  '/root/.kube/config':
+  '/root/.kube':
     ensure: directory
-    path: /etc/kubernetes/admin.conf
+    path: /root/.kube
     owner: 'root'
     group: 'root'
   '/root/.kube/config':
@@ -48,7 +48,9 @@ custom_file:
 
 # KUBE
 kubepao::kube_master_role: "true"
-
+kubepao::kube_master_pod_cidr: "10.244.0.0/16"
+kubepao::kube_master_cni_provider: "flannel"
+kubepao::kube_master_cni_url: "https://raw.githubusercontent.com/coreos/flannel/v0.10.0/Documentation/kube-flannel.yml"
 
 # CLASSES
 classes:
