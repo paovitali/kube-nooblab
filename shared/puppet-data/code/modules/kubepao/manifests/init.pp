@@ -4,8 +4,9 @@ class kubepao (
 
 # Kubernetes Master Parameters
 $kube_master_role="false",
+$kube_master_pod_cidr="",
 $kube_master_cni_provider="",
-$kuber_master_cni_url="",
+$kube_master_cni_url="",
 
 # Kubernetes Worker Parameters
 $kube_worker_role="false",
