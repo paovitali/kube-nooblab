@@ -31,9 +31,6 @@ services:
   'docker':
     enable: 'true'
     ensure: 'running'
-  'kubelet':
-    enable: 'true'
-    ensure: 'running'
 
 # KUBERNETES - CONFIGURE
 custom_file:
