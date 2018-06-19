@@ -2,7 +2,7 @@ class kubepao::master inherits kubepao {
 
   # Master Init
   exec { "kubeadm_init":
-    command => "kubeadm init --pod-network-cidr=$kube_master_pod_cidr",
+    command => "kubeadm init --pod-network-cidr=$kube_master_pod_cidr --token=$kube_master_token --token-ttl=$kube_master_token_ttl ",
     path   => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:",
     onlyif => "[ !  -f /etc/kubernetes/admin.conf ]"
   }
