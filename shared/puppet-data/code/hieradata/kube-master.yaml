@@ -48,6 +48,7 @@ kubepao::kube_master_role: "true"
 kubepao::kube_master_pod_cidr: "10.244.0.0/16"
 kubepao::kube_master_cni_provider: "flannel"
 kubepao::kube_master_cni_url: "https://raw.githubusercontent.com/coreos/flannel/v0.10.0/Documentation/kube-flannel.yml"
+kubepao::kube_master_token_cmd_file: "/etc/kubernetes/kube-token-cmd"
 
 # CLASSES
 classes:
