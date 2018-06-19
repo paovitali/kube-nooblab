@@ -10,6 +10,7 @@ $kube_master_cni_url="",
 $kube_master_token="",
 $kube_master_token_ttl="",
 $kube_master_ext_ip="",
+$kube_master_token_cmd_file="",
 
 # Kubernetes Worker Parameters
 $kube_worker_role="false",
