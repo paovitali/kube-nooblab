@@ -16,4 +16,11 @@ class kubepao::master inherits kubepao {
     }
   } 
 
-}
+ # Cluster Tokens creation
+  exec { "kubeadm_token_create":
+    command => "kubeadm token create --ttl 0 --print-join-command > $kube_master_token_cmd_file",
+    path   => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:",
+    onlyif => "[ ! -f $kube_master_token_cmd_path ]"
+  }
+
+} 
