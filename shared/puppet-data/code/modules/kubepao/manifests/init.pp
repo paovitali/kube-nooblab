@@ -7,15 +7,20 @@ $kube_master_role="false",
 $kube_master_pod_cidr="",
 $kube_master_cni_provider="",
 $kube_master_cni_url="",
+$kube_master_token="",
+$kube_master_token_ttl="",
+$kube_master_ext_ip="",
 
 # Kubernetes Worker Parameters
 $kube_worker_role="false",
-#$kube_worker_join_token="",
 
 ) {
 
+# EXTERNAL CLASSES
+include systemd::daemonreload#
+
 # COMMON CLASSES
-#include kubepao::common
+include kubepao::common
 
 # KUBERNETES MASTER ROLE CLASSES
 if $kube_master_role == "true" {
