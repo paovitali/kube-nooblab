@@ -10,10 +10,13 @@ $kube_master_cni_url="",
 $kube_master_token="",
 $kube_master_token_ttl="",
 $kube_master_ext_ip="",
-$kube_master_token_cmd_file="",
+$kube_master_join_certhash_file="",
 
 # Kubernetes Worker Parameters
 $kube_worker_role="false",
+$kube_worker_join_token="",
+$kube_worker_join_certhash="",
+$kube_worker_join_masterip="",
 
 ) {
 
@@ -25,6 +28,7 @@ include kubepao::common
 
 # KUBERNETES MASTER ROLE CLASSES
 if $kube_master_role == "true" {
+#   include kubepao::common
    include kubepao::master
 }
 
