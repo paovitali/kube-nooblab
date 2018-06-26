@@ -5,11 +5,11 @@ sudo yum update -y
 sudo yum check-update
 
 # Install mainline elrepo kernel 4.x
-#sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-#sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
-#sudo yum -y --enablerepo=elrepo-kernel install kernel-lt kernel-lt-devel
-#sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-#sudo grub2-set-default 0
+sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+sudo yum -y --enablerepo=elrepo-kernel install kernel-lt kernel-lt-devel
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo grub2-set-default 0
 
 # Disable selinux everywhere
 sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
