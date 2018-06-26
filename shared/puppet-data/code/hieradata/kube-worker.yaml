@@ -34,8 +34,8 @@ services:
 
 # KUBE
 kubepao::kube_worker_role: "true"
-kubepao::kube_worker_join_token: "476upt.n9ni5vjm2tgvlkdy"
-kubepao::kube_worker_join_certhash: "650554cba69af8be005a12b9421866794b3b028569a83a2e15a6ccabcba4cf92"
+kubepao::kube_worker_join_token: "k8swqf.u9bbxbrqn232zxax"
+kubepao::kube_worker_join_certhash: "a9c142a2cc89b63437a3e14868363532a5b9a38ce272b98061dcc86ce5b4b928"
 kubepao::kube_worker_join_masterip: "192.168.56.30"
 
 # CLASSES
