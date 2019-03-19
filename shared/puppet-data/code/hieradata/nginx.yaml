@@ -1,0 +1,30 @@
+# Hieradata - *nginx* role
+
+
+# NGINX - CONFIGURE REPO
+yum::managed_repos:
+  - 'nginx'
+yum::repos:
+  nginx:
+   ensure: 'present'
+   enabled: true
+   descr: 'ngnix'
+   baseurl: 'http://nginx.org/packages/centos/$releasever/$basearch/'
+   gpgcheck: false
+   target: '/etc/yum.repos.d/nginx.repo'
+
+# REQUIRED PACKAGES
+base::packages:
+ - nginx
+
+# SERVICES
+services:
+  'nginx':
+    enable: 'true'
+    ensure: 'running'
+
+# CLASSES
+classes:
+  - base::packages
+  - base::services
+  - yum

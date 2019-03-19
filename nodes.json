@@ -44,6 +44,38 @@
       ":cpus": 2,
       ":box": "centos/7",
       ":bootstrap": "bootstrap-centos-base.sh"
+    },
+    "nginx-mirror01.lab": {
+      ":ip": "192.168.56.51",
+      "ports": [],
+      ":memory": 1536,
+      ":cpus": 2,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-centos-base.sh"
+    },
+    "nginx-client01.lab": {
+      ":ip": "192.168.56.52",
+      "ports": [],
+      ":memory": 1024,
+      ":cpus": 2,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-centos-base.sh"
+    },
+    "nginx-client02.lab": {
+      ":ip": "192.168.56.53",
+      "ports": [],
+      ":memory": 1024,
+      ":cpus": 2,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-centos-base.sh"
+    },
+    "rundeck.lab": {
+      ":ip": "192.168.56.54",
+      "ports": [],
+      ":memory": 2048,
+      ":cpus": 2,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-centos-base.sh"
     }
   }
 }
