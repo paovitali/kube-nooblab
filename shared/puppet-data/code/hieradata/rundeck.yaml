@@ -1,0 +1,29 @@
+# Hieradata - *rundeck* role
+
+
+# RUNDECK - CONFIGURE REPO
+yum::repos:
+  nginx:
+   ensure: 'present'
+   enabled: true
+   descr: 'rundeck'
+   baseurl: 'https://dl.bintray.com/rundeck/rundeck-rpm/'
+   gpgcheck: true
+   target: '/etc/yum.repos.d/rundeck.repo'
+
+# REQUIRED PACKAGES
+base::packages:
+ - nginx
+ - rundeck
+
+# SERVICES
+services:
+  'rundeckd':
+    enable: 'true'
+    ensure: 'running'
+
+# CLASSES
+classes:
+  - base::packages
+  - base::services
+  - yum
