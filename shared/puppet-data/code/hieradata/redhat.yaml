@@ -1,0 +1,6 @@
+# SELINUX
+selinux::mode: 'disabled'
+
+# CLASSES
+classes:
+  - selinux

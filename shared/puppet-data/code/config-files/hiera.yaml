@@ -6,4 +6,5 @@
 :hierarchy:
   - "nodes/%{::trusted.certname}"
   - "%{::sysrole}"
+  - "os/%{facts.os.family}"
   - common
