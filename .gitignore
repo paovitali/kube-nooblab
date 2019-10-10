@@ -1,2 +1,4 @@
 .vagrant/**
 shared/puppet-data/code/modules/base/files/ssh-keys/**
+.idea
+*.log
