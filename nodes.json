@@ -84,6 +84,14 @@
       ":cpus": 2,
       ":box": "ubuntu/xenial64",
       ":bootstrap": "bootstrap-ubuntu-base.sh"
+    },
+    "cka-worker01.lab": {
+      ":ip": "192.168.56.70",
+      "ports": [],
+      ":memory": 2048,
+      ":cpus": 2,
+      ":box": "ubuntu/xenial64",
+      ":bootstrap": "bootstrap-ubuntu-base.sh"
     }
   }
 }
