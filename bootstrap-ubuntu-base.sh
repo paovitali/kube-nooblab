@@ -20,7 +20,7 @@ runinterval = 15m
 EOT
 
 # Run puppet agent 
-for i in {1..3}; do sudo /opt/puppetlabs/bin/puppet agent -tvd; done
+for i in {1..5}; do sudo /opt/puppetlabs/bin/puppet agent -tvd; done
 
 # Exiting
 exit 0
